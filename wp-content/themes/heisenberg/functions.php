@@ -60,7 +60,10 @@
             'public' => true,
             'show_ui' => true,
             'show_in_rest' => true,
-            'show_admin_column' => true
+            'show_admin_column' => true,
+            'rewrite' => [
+                'slug' => 'mweetTags'
+            ]
         ];
 
         register_taxonomy('mweet-tags', ['mweets'], $args);
