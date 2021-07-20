@@ -42,8 +42,8 @@
         // Add new taxonomy, NOT hierarchical (like tags)
         $args = [
             'labels' => [
-                'name' => 'mweet-tags',
-                'singular_name' => 'mweet-tag',
+                'name' => 'Mweet Tags',
+                'singular_name' => 'Mweet Tag',
                 'all_items' => __('All Mweet Tags'),
                 'edit_item' => __('Edit Mweet Tags'),
                 'view_item' => __('View Mweet Tags'),
