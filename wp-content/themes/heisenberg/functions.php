@@ -47,8 +47,8 @@
                 'all_items' => __('All Mweet Tags'),
                 'edit_item' => __('Edit Mweet Tags'),
                 'view_item' => __('View Mweet Tags'),
-                'update_item' => __('Update Mweet Tag'),
-                'add_new_item' => __('Add Mweet Tag'),
+                'update_item' => __('Update Mwtag'),
+                'add_new_item' => __('Add Mwtag'),
                 'search_items' => __('Search Mweet Tags'),
                 'popular_items' => __('Popular Mweet Tags'),
                 'add_or_remove_items' => __('Add Or Remove Mweet Tags'),
@@ -60,13 +60,10 @@
             'public' => true,
             'show_ui' => true,
             'show_in_rest' => true,
-            'show_admin_column' => true,
-            'rewrite' => [
-                'slug' => 'mweetTags'
-            ]
+            'show_admin_column' => true
         ];
 
-        register_taxonomy('mweet-tags', ['mweets'], $args);
+        register_taxonomy('mweetTags', ['mweets'], $args);
     }
 
     add_action('init', 'registerMwitterTags');
