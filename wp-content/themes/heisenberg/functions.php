@@ -37,3 +37,33 @@
     }
 
     add_action('init', 'registerMwitter');
+
+    function registerMwitterTags() {
+        // Add new taxonomy, NOT hierarchical (like tags)
+        $args = [
+            'labels' => [
+                'name' => 'mweet-tags',
+                'singular_name' => 'mweet-tag',
+                'all_items' => __('All Mweet Tags'),
+                'edit_item' => __('Edit Mweet Tags'),
+                'view_item' => __('View Mweet Tags'),
+                'update_item' => __('Update Mweet Tag'),
+                'add_new_item' => __('Add Mweet Tag'),
+                'search_items' => __('Search Mweet Tags'),
+                'popular_items' => __('Popular Mweet Tags'),
+                'add_or_remove_items' => __('Add Or Remove Mweet Tags'),
+                'not_found' => __('No Mweet Tags Found'),
+                'separate_items_with_commas' => __('Separate Mweet Tags With Commas'),
+                'choose_from_most_used' => __('Choose From Most Used Mweet Tags')
+            ],
+            'hierarchical' => false,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true
+        ];
+
+        register_taxonomy('mweet-tags', ['mweets'], $args);
+    }
+
+    add_action('init', 'registerMwitterTags');
