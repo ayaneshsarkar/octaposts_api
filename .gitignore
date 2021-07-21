@@ -1,2 +1,6 @@
+*
+!.gitignore
+wp-content
+wp-admin
+wp-includes
 upgrade
-wp-content/upgrade
